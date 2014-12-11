@@ -1,0 +1,6 @@
+<RCC>
+    <qresource prefix="/">
+        <file>res/images/1.ico</file>
+        <file>res/language/qt_zh_CN.qm</file>
+    </qresource>
+</RCC>
