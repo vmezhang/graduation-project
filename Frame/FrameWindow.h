@@ -20,8 +20,14 @@
 
 #include <QMainWindow>
 
+#include "shell.h"
+
+#define MAX_TAB 64
+
 class QAction;
 class QLabel;
+class QTabWidget;
+class QWidget;
 
 class MainWindow : public QMainWindow {
     Q_OBJECT
@@ -37,6 +43,15 @@ private slots:
     void newTerminal();
     // 打开编辑器
     void newEdit();
+    // 关闭标签页
+    void removeShellTab(int index);
+    // 关闭所有终端
+    void closeAllShell();
+
+    // 关于我们
+    void aboutUs();
+    // 使用指南
+    void useGuide();
 
 private:
     // 创建动作
@@ -45,17 +60,41 @@ private:
     void createMenus();
     // 创建工具栏
     void createToolBars();
+    // 初始化标签页
+    void initTab();
+    // 创建标签页
+    void createNewTab(ShellEdit *newShellEdit);
 
-    // 菜单栏-新建
+    // 菜单栏
     QMenu *newMenu;
-    // 工具栏-添加终端
-    QToolBar *addTerminal;
+
+    // 工具栏-添加内容
+    QToolBar *addThing;
+    // 工具栏-帮助信息
+    QToolBar *Help;
+
     // 打开终端动作
     QAction *newTerminalAction;
     // 打开编辑器动作
     QAction *newEditAction;
+    // 关闭所有终端动作
+    QAction *closeAllShellAction;
     // 退出动作
     QAction *exitAction;
+
+    // 关于本软件动作
+    QAction *about;
+    // 使用帮助
+    QAction *useHelp;
+
+private:
+    // 标签页数
+    int newTabCount;
+    // 标签页
+    QTabWidget *tabWidget;
+    // shell部分
+    ShellEdit *shellEdit;
+
 };
 
 #endif // FRAMWINDOW_H

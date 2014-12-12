@@ -31,7 +31,7 @@ int main(int argc, char *argv[])
 
     MainWindow w;
     // 窗口图标
-    w.setWindowIcon(QIcon(":/res/images/1.ico"));
+    w.setWindowIcon(QIcon(":/res/images/3.png"));
     // 窗口大小
     w.resize(800, 550);
     // 窗口名称
