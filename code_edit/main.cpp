@@ -2,7 +2,7 @@
 // 
 //       Filename:  main.cpp
 //
-//    Description:  
+//    Description:  测试函数
 //
 //        Version:  1.0
 //        Created:  2014年12月14日 10时30分02秒

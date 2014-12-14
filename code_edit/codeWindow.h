@@ -2,7 +2,7 @@
 // 
 //       Filename:  codeWindow.h
 //
-//    Description:  
+//    Description:  编辑器主窗口类
 //
 //        Version:  1.0
 //        Created:  2014年12月14日 10时29分46秒

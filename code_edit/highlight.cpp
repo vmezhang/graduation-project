@@ -2,7 +2,7 @@
 // 
 //       Filename:  highlight.cpp
 //
-//    Description:  
+//    Description:  代码高亮实现
 //
 //        Version:  1.0
 //        Created:  2014年12月14日 10时29分26秒

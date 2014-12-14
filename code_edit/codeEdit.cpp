@@ -2,7 +2,7 @@
 // 
 //       Filename:  codeEdit.cpp
 //
-//    Description:  
+//    Description:  编辑实现
 //
 //        Version:  1.0
 //        Created:  2014年12月14日 10时29分00秒

@@ -2,7 +2,7 @@
 // 
 //       Filename:  highlight.h
 //
-//    Description:  
+//    Description:  代码高亮类
 //
 //        Version:  1.0
 //        Created:  2014年12月14日 10时29分16秒

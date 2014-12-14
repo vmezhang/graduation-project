@@ -2,7 +2,7 @@
 // 
 //       Filename:  codeWindow.cpp
 //
-//    Description:  
+//    Description:  编辑器窗口实现
 //
 //        Version:  1.0
 //        Created:  2014年12月14日 10时29分52秒

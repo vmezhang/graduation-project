@@ -2,7 +2,7 @@
 // 
 //       Filename:  codeEdit.h
 //
-//    Description:  
+//    Description:  编辑类声明
 //
 //        Version:  1.0
 //        Created:  2014年12月14日 10时28分54秒
