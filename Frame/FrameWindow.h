@@ -20,7 +20,8 @@
 
 #include <QMainWindow>
 
-#include "shell.h"
+#include "Shell/shell.h"
+#include "CodeEdit/codeWindow.h"
 
 #define MAX_TAB 64
 
@@ -47,6 +48,8 @@ private slots:
     void removeShellTab(int index);
     // 关闭所有终端
     void closeAllShell();
+    // 退出程序
+    void exitApp();
 
     // 关于我们
     void aboutUs();
@@ -94,6 +97,11 @@ private:
     QTabWidget *tabWidget;
     // shell部分
     ShellEdit *shellEdit;
+
+    // codeEdit
+    CodeWindow edit;
+    QMainWindow guide;
+    QMainWindow aboutus;
 
 };
 

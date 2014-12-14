@@ -24,6 +24,8 @@ MainWindow::MainWindow()
     createMenus();
     createToolBars();
     initTab();
+
+    setFocusPolicy(Qt::StrongFocus);
 }
 
 void MainWindow::initTab()
@@ -69,7 +71,7 @@ void MainWindow::createAction()
     exitAction = new QAction(tr("&退出"),this);
     exitAction->setShortcut(tr("Ctrl+Q"));
     exitAction->setStatusTip(tr("关闭程序"));
-    connect(exitAction, SIGNAL(triggered()), this, SLOT(close()));
+    connect(exitAction, SIGNAL(triggered()), this, SLOT(exitApp()));
 
     // 动作关于
     about = new QAction(tr("&关于我们"), this);
@@ -153,29 +155,40 @@ void MainWindow::closeAllShell()
 
 void MainWindow::newEdit()
 {
-    QMainWindow *edit = new QMainWindow();
-    edit->setWindowTitle("MyEdit");
-    edit->resize(500, 350);
-    edit->show();
+    // 打开编辑器
+    edit.resize(500, 350);
+    edit.show();
+    edit.move((QApplication::desktop()->width() - edit.width()) >> 1,
+                        (QApplication::desktop()->height() - edit.height()) >> 1);
 }
 
 void MainWindow::aboutUs()
 {
-    QMainWindow *aboutus = new QMainWindow();
-    aboutus->setWindowTitle("关于我们");
-    aboutus->resize(100, 50);
-    aboutus->show();
+    aboutus.setWindowTitle("关于我们");
+    aboutus.resize(500, 350);
+    aboutus.show();
+    aboutus.move((QApplication::desktop()->width() - aboutus.width()) >> 1,
+                        (QApplication::desktop()->height() - aboutus.height()) >> 1);
 }
 
 void MainWindow::useGuide()
 {
-    QMainWindow *guide = new QMainWindow();
-    guide->setWindowTitle("使用指南");
-    guide->resize(100, 50);
-    guide->show();
+    guide.setWindowTitle("使用指南");
+    guide.resize(500, 350);
+    guide.show();
+    guide.move((QApplication::desktop()->width() - guide.width()) >> 1,
+                        (QApplication::desktop()->height() - guide.height()) >> 1);
 }
 
 void MainWindow::closeEvent(QCloseEvent *event)
 {
+    // 退出整个程序
     event->accept();
+    qApp->exit();
+}
+
+void MainWindow::exitApp()
+{
+    close();
+    qApp->exit();
 }

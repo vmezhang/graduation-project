@@ -1,11 +1,21 @@
 HEADERS += \
     FrameWindow.h \
-    shell.h
+    shell.h \
+    CodeEdit/highlight.h \
+    CodeEdit/codeWindow.h \
+    CodeEdit/codeEdit.h \
+    Shell/shell.h
 
 SOURCES += \
     main.cpp \
     FrameWindow.cpp \
-    shell.cpp
+    CodeEdit/highlight.cpp \
+    CodeEdit/codeWindow.cpp \
+    CodeEdit/codeEdit.cpp \
+    Shell/shell.cpp
 
 RESOURCES += \
-    source.qrc
+    source.qrc \
+
+FORMS += \
+    CodeEdit/codeWindow.ui

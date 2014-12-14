@@ -7,5 +7,15 @@
         <file>res/images/3.png</file>
         <file>res/images/4.png</file>
         <file>res/images/5.png</file>
+        <file>res/edit_image/accessories-text-editor.svg</file>
+        <file>res/edit_image/document-new.svg</file>
+        <file>res/edit_image/document-open.svg</file>
+        <file>res/edit_image/document-save.svg</file>
+        <file>res/edit_image/document-save-as.svg</file>
+        <file>res/edit_image/edit-copy.svg</file>
+        <file>res/edit_image/edit-cut.svg</file>
+        <file>res/edit_image/edit-paste.svg</file>
+        <file>res/edit_image/edit-redo.svg</file>
+        <file>res/edit_image/edit-undo.svg</file>
     </qresource>
 </RCC>

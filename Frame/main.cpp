@@ -40,6 +40,7 @@ int main(int argc, char *argv[])
     w.move((QApplication::desktop()->width() - w.width()) >> 1,
                 (QApplication::desktop()->height() - w.height()) >> 1);
     w.show();
+    w.setFocus();
 
     return a.exec();
 }
