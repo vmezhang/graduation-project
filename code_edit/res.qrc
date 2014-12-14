@@ -1,0 +1,14 @@
+<RCC>
+    <qresource prefix="/">
+        <file>res/document-new.svg</file>
+        <file>res/document-open.svg</file>
+        <file>res/document-save.svg</file>
+        <file>res/document-save-as.svg</file>
+        <file>res/edit-copy.svg</file>
+        <file>res/edit-cut.svg</file>
+        <file>res/edit-paste.svg</file>
+        <file>res/edit-redo.svg</file>
+        <file>res/edit-undo.svg</file>
+        <file>res/accessories-text-editor.svg</file>
+    </qresource>
+</RCC>
