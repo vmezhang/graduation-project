@@ -28,21 +28,21 @@ class CodePad;
 QT_END_NAMESPACE
 
 namespace Ui {
-    class MainWindow;
+    class CodeWindow;
 }
 
-class MainWindow : public QMainWindow {
+class CodeWindow : public QMainWindow {
     Q_OBJECT
 public:
-    explicit MainWindow(QWidget *parent = 0);
-    ~MainWindow();
+    explicit CodeWindow(QWidget *parent = 0);
+    ~CodeWindow();
 
 protected:
     void changeEvent(QEvent *e);
     void closeEvent(QCloseEvent *e);
 
 private:
-    Ui::MainWindow *ui;
+    Ui::CodeWindow *ui;
 
 private slots:
     void on_actionFont_triggered();

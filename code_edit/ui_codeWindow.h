@@ -1,7 +1,7 @@
 /********************************************************************************
 ** Form generated from reading UI file 'codeWindow.ui'
 **
-** Created: Sun Dec 14 10:48:26 2014
+** Created: Sun Dec 14 11:29:03 2014
 **      by: Qt User Interface Compiler version 4.8.1
 **
 ** WARNING! All changes made in this file will be lost when recompiling UI file!
@@ -26,7 +26,7 @@
 
 QT_BEGIN_NAMESPACE
 
-class Ui_MainWindow
+class Ui_CodeWindow
 {
 public:
     QAction *actionExit;
@@ -62,105 +62,105 @@ public:
     QStatusBar *statusBar;
     QToolBar *toolBar;
 
-    void setupUi(QMainWindow *MainWindow)
+    void setupUi(QMainWindow *CodeWindow)
     {
-        if (MainWindow->objectName().isEmpty())
-            MainWindow->setObjectName(QString::fromUtf8("MainWindow"));
-        MainWindow->setWindowModality(Qt::ApplicationModal);
-        MainWindow->resize(640, 480);
-        MainWindow->setMinimumSize(QSize(0, 0));
-        MainWindow->setContextMenuPolicy(Qt::NoContextMenu);
+        if (CodeWindow->objectName().isEmpty())
+            CodeWindow->setObjectName(QString::fromUtf8("CodeWindow"));
+        CodeWindow->setWindowModality(Qt::ApplicationModal);
+        CodeWindow->resize(640, 480);
+        CodeWindow->setMinimumSize(QSize(0, 0));
+        CodeWindow->setContextMenuPolicy(Qt::NoContextMenu);
         QIcon icon;
         icon.addFile(QString::fromUtf8(":/res/accessories-text-editor.svg"), QSize(), QIcon::Normal, QIcon::Off);
-        MainWindow->setWindowIcon(icon);
-        MainWindow->setDocumentMode(true);
-        MainWindow->setDockOptions(QMainWindow::AllowNestedDocks|QMainWindow::AllowTabbedDocks|QMainWindow::AnimatedDocks|QMainWindow::ForceTabbedDocks|QMainWindow::VerticalTabs);
-        actionExit = new QAction(MainWindow);
+        CodeWindow->setWindowIcon(icon);
+        CodeWindow->setDocumentMode(true);
+        CodeWindow->setDockOptions(QMainWindow::AllowNestedDocks|QMainWindow::AllowTabbedDocks|QMainWindow::AnimatedDocks|QMainWindow::ForceTabbedDocks|QMainWindow::VerticalTabs);
+        actionExit = new QAction(CodeWindow);
         actionExit->setObjectName(QString::fromUtf8("actionExit"));
         actionExit->setIconVisibleInMenu(false);
-        actionAbout = new QAction(MainWindow);
+        actionAbout = new QAction(CodeWindow);
         actionAbout->setObjectName(QString::fromUtf8("actionAbout"));
         actionAbout->setIconVisibleInMenu(false);
-        actionAboutQt = new QAction(MainWindow);
+        actionAboutQt = new QAction(CodeWindow);
         actionAboutQt->setObjectName(QString::fromUtf8("actionAboutQt"));
         actionAboutQt->setIconVisibleInMenu(false);
-        actionNew = new QAction(MainWindow);
+        actionNew = new QAction(CodeWindow);
         actionNew->setObjectName(QString::fromUtf8("actionNew"));
         QIcon icon1;
         icon1.addFile(QString::fromUtf8(":/res/document-new.svg"), QSize(), QIcon::Normal, QIcon::Off);
         actionNew->setIcon(icon1);
         actionNew->setIconVisibleInMenu(false);
-        actionClose = new QAction(MainWindow);
+        actionClose = new QAction(CodeWindow);
         actionClose->setObjectName(QString::fromUtf8("actionClose"));
         actionClose->setIconVisibleInMenu(false);
-        actionCloseAll = new QAction(MainWindow);
+        actionCloseAll = new QAction(CodeWindow);
         actionCloseAll->setObjectName(QString::fromUtf8("actionCloseAll"));
         actionCloseAll->setIconVisibleInMenu(false);
-        actionOpen = new QAction(MainWindow);
+        actionOpen = new QAction(CodeWindow);
         actionOpen->setObjectName(QString::fromUtf8("actionOpen"));
         QIcon icon2;
         icon2.addFile(QString::fromUtf8(":/res/document-open.svg"), QSize(), QIcon::Normal, QIcon::Off);
         actionOpen->setIcon(icon2);
         actionOpen->setIconVisibleInMenu(false);
-        actionSave = new QAction(MainWindow);
+        actionSave = new QAction(CodeWindow);
         actionSave->setObjectName(QString::fromUtf8("actionSave"));
         QIcon icon3;
         icon3.addFile(QString::fromUtf8(":/res/document-save.svg"), QSize(), QIcon::Normal, QIcon::Off);
         actionSave->setIcon(icon3);
         actionSave->setIconVisibleInMenu(false);
-        actionSaveAs = new QAction(MainWindow);
+        actionSaveAs = new QAction(CodeWindow);
         actionSaveAs->setObjectName(QString::fromUtf8("actionSaveAs"));
         QIcon icon4;
         icon4.addFile(QString::fromUtf8(":/res/document-save-as.svg"), QSize(), QIcon::Normal, QIcon::Off);
         actionSaveAs->setIcon(icon4);
         actionSaveAs->setIconVisibleInMenu(false);
-        actionUndo = new QAction(MainWindow);
+        actionUndo = new QAction(CodeWindow);
         actionUndo->setObjectName(QString::fromUtf8("actionUndo"));
         QIcon icon5;
         icon5.addFile(QString::fromUtf8(":/res/edit-undo.svg"), QSize(), QIcon::Normal, QIcon::Off);
         actionUndo->setIcon(icon5);
         actionUndo->setIconVisibleInMenu(false);
-        actionRedo = new QAction(MainWindow);
+        actionRedo = new QAction(CodeWindow);
         actionRedo->setObjectName(QString::fromUtf8("actionRedo"));
         QIcon icon6;
         icon6.addFile(QString::fromUtf8(":/res/edit-redo.svg"), QSize(), QIcon::Normal, QIcon::Off);
         actionRedo->setIcon(icon6);
         actionRedo->setIconVisibleInMenu(false);
-        actionCut = new QAction(MainWindow);
+        actionCut = new QAction(CodeWindow);
         actionCut->setObjectName(QString::fromUtf8("actionCut"));
         QIcon icon7;
         icon7.addFile(QString::fromUtf8(":/res/edit-cut.svg"), QSize(), QIcon::Normal, QIcon::Off);
         actionCut->setIcon(icon7);
         actionCut->setIconVisibleInMenu(false);
-        actionCopy = new QAction(MainWindow);
+        actionCopy = new QAction(CodeWindow);
         actionCopy->setObjectName(QString::fromUtf8("actionCopy"));
         QIcon icon8;
         icon8.addFile(QString::fromUtf8(":/res/edit-copy.svg"), QSize(), QIcon::Normal, QIcon::Off);
         actionCopy->setIcon(icon8);
         actionCopy->setIconVisibleInMenu(false);
-        actionPaste = new QAction(MainWindow);
+        actionPaste = new QAction(CodeWindow);
         actionPaste->setObjectName(QString::fromUtf8("actionPaste"));
         QIcon icon9;
         icon9.addFile(QString::fromUtf8(":/res/edit-paste.svg"), QSize(), QIcon::Normal, QIcon::Off);
         actionPaste->setIcon(icon9);
         actionPaste->setIconVisibleInMenu(false);
-        actionSaveAll = new QAction(MainWindow);
+        actionSaveAll = new QAction(CodeWindow);
         actionSaveAll->setObjectName(QString::fromUtf8("actionSaveAll"));
-        actionLineNumber = new QAction(MainWindow);
+        actionLineNumber = new QAction(CodeWindow);
         actionLineNumber->setObjectName(QString::fromUtf8("actionLineNumber"));
         actionLineNumber->setCheckable(true);
-        actionHightlight = new QAction(MainWindow);
+        actionHightlight = new QAction(CodeWindow);
         actionHightlight->setObjectName(QString::fromUtf8("actionHightlight"));
         actionHightlight->setCheckable(true);
-        actionWordWrap = new QAction(MainWindow);
+        actionWordWrap = new QAction(CodeWindow);
         actionWordWrap->setObjectName(QString::fromUtf8("actionWordWrap"));
         actionWordWrap->setCheckable(true);
-        actionHightlightCurrentLine = new QAction(MainWindow);
+        actionHightlightCurrentLine = new QAction(CodeWindow);
         actionHightlightCurrentLine->setObjectName(QString::fromUtf8("actionHightlightCurrentLine"));
         actionHightlightCurrentLine->setCheckable(true);
-        actionFont = new QAction(MainWindow);
+        actionFont = new QAction(CodeWindow);
         actionFont->setObjectName(QString::fromUtf8("actionFont"));
-        centralWidget = new QWidget(MainWindow);
+        centralWidget = new QWidget(CodeWindow);
         centralWidget->setObjectName(QString::fromUtf8("centralWidget"));
         gridLayout = new QGridLayout(centralWidget);
         gridLayout->setSpacing(0);
@@ -179,10 +179,10 @@ public:
 
         gridLayout->addWidget(tabWidget, 0, 0, 1, 1);
 
-        MainWindow->setCentralWidget(centralWidget);
-        menuBar = new QMenuBar(MainWindow);
+        CodeWindow->setCentralWidget(centralWidget);
+        menuBar = new QMenuBar(CodeWindow);
         menuBar->setObjectName(QString::fromUtf8("menuBar"));
-        menuBar->setGeometry(QRect(0, 0, 640, 23));
+        menuBar->setGeometry(QRect(0, 0, 640, 28));
         menuBar->setContextMenuPolicy(Qt::DefaultContextMenu);
         menuFile = new QMenu(menuBar);
         menuFile->setObjectName(QString::fromUtf8("menuFile"));
@@ -196,17 +196,17 @@ public:
         menuEdit->setObjectName(QString::fromUtf8("menuEdit"));
         menuView = new QMenu(menuBar);
         menuView->setObjectName(QString::fromUtf8("menuView"));
-        MainWindow->setMenuBar(menuBar);
-        statusBar = new QStatusBar(MainWindow);
+        CodeWindow->setMenuBar(menuBar);
+        statusBar = new QStatusBar(CodeWindow);
         statusBar->setObjectName(QString::fromUtf8("statusBar"));
-        MainWindow->setStatusBar(statusBar);
-        toolBar = new QToolBar(MainWindow);
+        CodeWindow->setStatusBar(statusBar);
+        toolBar = new QToolBar(CodeWindow);
         toolBar->setObjectName(QString::fromUtf8("toolBar"));
         toolBar->setContextMenuPolicy(Qt::DefaultContextMenu);
         toolBar->setMovable(false);
         toolBar->setAllowedAreas(Qt::NoToolBarArea);
         toolBar->setIconSize(QSize(24, 24));
-        MainWindow->addToolBar(Qt::TopToolBarArea, toolBar);
+        CodeWindow->addToolBar(Qt::TopToolBarArea, toolBar);
 
         menuBar->addAction(menuFile->menuAction());
         menuBar->addAction(menuEdit->menuAction());
@@ -252,58 +252,58 @@ public:
         toolBar->addAction(actionUndo);
         toolBar->addAction(actionRedo);
 
-        retranslateUi(MainWindow);
+        retranslateUi(CodeWindow);
 
-        QMetaObject::connectSlotsByName(MainWindow);
+        QMetaObject::connectSlotsByName(CodeWindow);
     } // setupUi
 
-    void retranslateUi(QMainWindow *MainWindow)
+    void retranslateUi(QMainWindow *CodeWindow)
     {
-        MainWindow->setWindowTitle(QApplication::translate("MainWindow", "QtCodePad", 0, QApplication::UnicodeUTF8));
-        actionExit->setText(QApplication::translate("MainWindow", "E&xit", 0, QApplication::UnicodeUTF8));
-        actionAbout->setText(QApplication::translate("MainWindow", "&About", 0, QApplication::UnicodeUTF8));
-        actionAboutQt->setText(QApplication::translate("MainWindow", "About &Qt", 0, QApplication::UnicodeUTF8));
-        actionNew->setText(QApplication::translate("MainWindow", "&New", 0, QApplication::UnicodeUTF8));
-        actionNew->setShortcut(QApplication::translate("MainWindow", "Ctrl+N", 0, QApplication::UnicodeUTF8));
-        actionClose->setText(QApplication::translate("MainWindow", "Close", 0, QApplication::UnicodeUTF8));
-        actionClose->setShortcut(QApplication::translate("MainWindow", "Ctrl+W", 0, QApplication::UnicodeUTF8));
-        actionCloseAll->setText(QApplication::translate("MainWindow", "Close A&ll", 0, QApplication::UnicodeUTF8));
-        actionOpen->setText(QApplication::translate("MainWindow", "&Open", 0, QApplication::UnicodeUTF8));
-        actionOpen->setShortcut(QApplication::translate("MainWindow", "Ctrl+O", 0, QApplication::UnicodeUTF8));
-        actionSave->setText(QApplication::translate("MainWindow", "&Save", 0, QApplication::UnicodeUTF8));
-        actionSave->setShortcut(QApplication::translate("MainWindow", "Ctrl+S", 0, QApplication::UnicodeUTF8));
-        actionSaveAs->setText(QApplication::translate("MainWindow", "Save &As", 0, QApplication::UnicodeUTF8));
-        actionSaveAs->setShortcut(QApplication::translate("MainWindow", "F6", 0, QApplication::UnicodeUTF8));
-        actionUndo->setText(QApplication::translate("MainWindow", "&Undo", 0, QApplication::UnicodeUTF8));
-        actionUndo->setShortcut(QApplication::translate("MainWindow", "Ctrl+Z", 0, QApplication::UnicodeUTF8));
-        actionRedo->setText(QApplication::translate("MainWindow", "&Redo", 0, QApplication::UnicodeUTF8));
-        actionRedo->setShortcut(QApplication::translate("MainWindow", "Ctrl+Y", 0, QApplication::UnicodeUTF8));
-        actionCut->setText(QApplication::translate("MainWindow", "Cu&t", 0, QApplication::UnicodeUTF8));
-        actionCut->setShortcut(QApplication::translate("MainWindow", "Ctrl+X", 0, QApplication::UnicodeUTF8));
-        actionCopy->setText(QApplication::translate("MainWindow", "&Copy", 0, QApplication::UnicodeUTF8));
-        actionCopy->setShortcut(QApplication::translate("MainWindow", "Ctrl+C", 0, QApplication::UnicodeUTF8));
-        actionPaste->setText(QApplication::translate("MainWindow", "&Paste", 0, QApplication::UnicodeUTF8));
-        actionPaste->setShortcut(QApplication::translate("MainWindow", "Ctrl+V", 0, QApplication::UnicodeUTF8));
-        actionSaveAll->setText(QApplication::translate("MainWindow", "Save All", 0, QApplication::UnicodeUTF8));
-        actionSaveAll->setShortcut(QApplication::translate("MainWindow", "Shift+F6", 0, QApplication::UnicodeUTF8));
-        actionLineNumber->setText(QApplication::translate("MainWindow", "Line Number", 0, QApplication::UnicodeUTF8));
-        actionHightlight->setText(QApplication::translate("MainWindow", "Syntax Hightlight", 0, QApplication::UnicodeUTF8));
-        actionWordWrap->setText(QApplication::translate("MainWindow", "Word Wrap", 0, QApplication::UnicodeUTF8));
-        actionHightlightCurrentLine->setText(QApplication::translate("MainWindow", "Hightlight Current Line", 0, QApplication::UnicodeUTF8));
-        actionFont->setText(QApplication::translate("MainWindow", "Font...", 0, QApplication::UnicodeUTF8));
-        menuFile->setTitle(QApplication::translate("MainWindow", "&File", 0, QApplication::UnicodeUTF8));
-        menuRecentFiles->setTitle(QApplication::translate("MainWindow", "Recent Files", 0, QApplication::UnicodeUTF8));
-        menuEncoding->setTitle(QApplication::translate("MainWindow", "Encoding", 0, QApplication::UnicodeUTF8));
-        menuHelp->setTitle(QApplication::translate("MainWindow", "&Help", 0, QApplication::UnicodeUTF8));
-        menuEdit->setTitle(QApplication::translate("MainWindow", "Edit", 0, QApplication::UnicodeUTF8));
-        menuView->setTitle(QApplication::translate("MainWindow", "&View", 0, QApplication::UnicodeUTF8));
-        toolBar->setWindowTitle(QApplication::translate("MainWindow", "toolBar", 0, QApplication::UnicodeUTF8));
+        CodeWindow->setWindowTitle(QApplication::translate("CodeWindow", "CodeEdit", 0, QApplication::UnicodeUTF8));
+        actionExit->setText(QApplication::translate("CodeWindow", "E&xit", 0, QApplication::UnicodeUTF8));
+        actionAbout->setText(QApplication::translate("CodeWindow", "&About", 0, QApplication::UnicodeUTF8));
+        actionAboutQt->setText(QApplication::translate("CodeWindow", "About &Qt", 0, QApplication::UnicodeUTF8));
+        actionNew->setText(QApplication::translate("CodeWindow", "&New", 0, QApplication::UnicodeUTF8));
+        actionNew->setShortcut(QApplication::translate("CodeWindow", "Ctrl+N", 0, QApplication::UnicodeUTF8));
+        actionClose->setText(QApplication::translate("CodeWindow", "Close", 0, QApplication::UnicodeUTF8));
+        actionClose->setShortcut(QApplication::translate("CodeWindow", "Ctrl+W", 0, QApplication::UnicodeUTF8));
+        actionCloseAll->setText(QApplication::translate("CodeWindow", "Close A&ll", 0, QApplication::UnicodeUTF8));
+        actionOpen->setText(QApplication::translate("CodeWindow", "&Open", 0, QApplication::UnicodeUTF8));
+        actionOpen->setShortcut(QApplication::translate("CodeWindow", "Ctrl+O", 0, QApplication::UnicodeUTF8));
+        actionSave->setText(QApplication::translate("CodeWindow", "&Save", 0, QApplication::UnicodeUTF8));
+        actionSave->setShortcut(QApplication::translate("CodeWindow", "Ctrl+S", 0, QApplication::UnicodeUTF8));
+        actionSaveAs->setText(QApplication::translate("CodeWindow", "Save &As", 0, QApplication::UnicodeUTF8));
+        actionSaveAs->setShortcut(QApplication::translate("CodeWindow", "F6", 0, QApplication::UnicodeUTF8));
+        actionUndo->setText(QApplication::translate("CodeWindow", "&Undo", 0, QApplication::UnicodeUTF8));
+        actionUndo->setShortcut(QApplication::translate("CodeWindow", "Ctrl+Z", 0, QApplication::UnicodeUTF8));
+        actionRedo->setText(QApplication::translate("CodeWindow", "&Redo", 0, QApplication::UnicodeUTF8));
+        actionRedo->setShortcut(QApplication::translate("CodeWindow", "Ctrl+Y", 0, QApplication::UnicodeUTF8));
+        actionCut->setText(QApplication::translate("CodeWindow", "Cu&t", 0, QApplication::UnicodeUTF8));
+        actionCut->setShortcut(QApplication::translate("CodeWindow", "Ctrl+X", 0, QApplication::UnicodeUTF8));
+        actionCopy->setText(QApplication::translate("CodeWindow", "&Copy", 0, QApplication::UnicodeUTF8));
+        actionCopy->setShortcut(QApplication::translate("CodeWindow", "Ctrl+C", 0, QApplication::UnicodeUTF8));
+        actionPaste->setText(QApplication::translate("CodeWindow", "&Paste", 0, QApplication::UnicodeUTF8));
+        actionPaste->setShortcut(QApplication::translate("CodeWindow", "Ctrl+V", 0, QApplication::UnicodeUTF8));
+        actionSaveAll->setText(QApplication::translate("CodeWindow", "Save All", 0, QApplication::UnicodeUTF8));
+        actionSaveAll->setShortcut(QApplication::translate("CodeWindow", "Shift+F6", 0, QApplication::UnicodeUTF8));
+        actionLineNumber->setText(QApplication::translate("CodeWindow", "Line Number", 0, QApplication::UnicodeUTF8));
+        actionHightlight->setText(QApplication::translate("CodeWindow", "Syntax Hightlight", 0, QApplication::UnicodeUTF8));
+        actionWordWrap->setText(QApplication::translate("CodeWindow", "Word Wrap", 0, QApplication::UnicodeUTF8));
+        actionHightlightCurrentLine->setText(QApplication::translate("CodeWindow", "Hightlight Current Line", 0, QApplication::UnicodeUTF8));
+        actionFont->setText(QApplication::translate("CodeWindow", "Font...", 0, QApplication::UnicodeUTF8));
+        menuFile->setTitle(QApplication::translate("CodeWindow", "&File", 0, QApplication::UnicodeUTF8));
+        menuRecentFiles->setTitle(QApplication::translate("CodeWindow", "Recent Files", 0, QApplication::UnicodeUTF8));
+        menuEncoding->setTitle(QApplication::translate("CodeWindow", "Encoding", 0, QApplication::UnicodeUTF8));
+        menuHelp->setTitle(QApplication::translate("CodeWindow", "&Help", 0, QApplication::UnicodeUTF8));
+        menuEdit->setTitle(QApplication::translate("CodeWindow", "Edit", 0, QApplication::UnicodeUTF8));
+        menuView->setTitle(QApplication::translate("CodeWindow", "&View", 0, QApplication::UnicodeUTF8));
+        toolBar->setWindowTitle(QApplication::translate("CodeWindow", "toolBar", 0, QApplication::UnicodeUTF8));
     } // retranslateUi
 
 };
 
 namespace Ui {
-    class MainWindow: public Ui_MainWindow {};
+    class CodeWindow: public Ui_CodeWindow {};
 } // namespace Ui
 
 QT_END_NAMESPACE

@@ -1,7 +1,7 @@
 /****************************************************************************
 ** Meta object code from reading C++ file 'codeWindow.h'
 **
-** Created: Sun Dec 14 11:00:15 2014
+** Created: Sun Dec 14 11:29:12 2014
 **      by: The Qt Meta Object Compiler version 63 (Qt 4.8.1)
 **
 ** WARNING! All changes made in this file will be lost!
@@ -17,7 +17,7 @@
 #endif
 
 QT_BEGIN_MOC_NAMESPACE
-static const uint qt_meta_data_MainWindow[] = {
+static const uint qt_meta_data_CodeWindow[] = {
 
  // content:
        6,       // revision
@@ -61,8 +61,8 @@ static const uint qt_meta_data_MainWindow[] = {
        0        // eod
 };
 
-static const char qt_meta_stringdata_MainWindow[] = {
-    "MainWindow\0\0on_actionFont_triggered()\0"
+static const char qt_meta_stringdata_CodeWindow[] = {
+    "CodeWindow\0\0on_actionFont_triggered()\0"
     "checked\0on_actionHightlightCurrentLine_triggered(bool)\0"
     "on_actionLineNumber_triggered(bool)\0"
     "on_actionHightlight_triggered(bool)\0"
@@ -87,11 +87,11 @@ static const char qt_meta_stringdata_MainWindow[] = {
     "setupMenu()\0openRecentFile()\0setupCodec()\0"
 };
 
-void MainWindow::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id, void **_a)
+void CodeWindow::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id, void **_a)
 {
     if (_c == QMetaObject::InvokeMetaMethod) {
         Q_ASSERT(staticMetaObject.cast(_o));
-        MainWindow *_t = static_cast<MainWindow *>(_o);
+        CodeWindow *_t = static_cast<CodeWindow *>(_o);
         switch (_id) {
         case 0: _t->on_actionFont_triggered(); break;
         case 1: _t->on_actionHightlightCurrentLine_triggered((*reinterpret_cast< bool(*)>(_a[1]))); break;
@@ -124,33 +124,33 @@ void MainWindow::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id, 
     }
 }
 
-const QMetaObjectExtraData MainWindow::staticMetaObjectExtraData = {
+const QMetaObjectExtraData CodeWindow::staticMetaObjectExtraData = {
     0,  qt_static_metacall 
 };
 
-const QMetaObject MainWindow::staticMetaObject = {
-    { &QMainWindow::staticMetaObject, qt_meta_stringdata_MainWindow,
-      qt_meta_data_MainWindow, &staticMetaObjectExtraData }
+const QMetaObject CodeWindow::staticMetaObject = {
+    { &QMainWindow::staticMetaObject, qt_meta_stringdata_CodeWindow,
+      qt_meta_data_CodeWindow, &staticMetaObjectExtraData }
 };
 
 #ifdef Q_NO_DATA_RELOCATION
-const QMetaObject &MainWindow::getStaticMetaObject() { return staticMetaObject; }
+const QMetaObject &CodeWindow::getStaticMetaObject() { return staticMetaObject; }
 #endif //Q_NO_DATA_RELOCATION
 
-const QMetaObject *MainWindow::metaObject() const
+const QMetaObject *CodeWindow::metaObject() const
 {
     return QObject::d_ptr->metaObject ? QObject::d_ptr->metaObject : &staticMetaObject;
 }
 
-void *MainWindow::qt_metacast(const char *_clname)
+void *CodeWindow::qt_metacast(const char *_clname)
 {
     if (!_clname) return 0;
-    if (!strcmp(_clname, qt_meta_stringdata_MainWindow))
-        return static_cast<void*>(const_cast< MainWindow*>(this));
+    if (!strcmp(_clname, qt_meta_stringdata_CodeWindow))
+        return static_cast<void*>(const_cast< CodeWindow*>(this));
     return QMainWindow::qt_metacast(_clname);
 }
 
-int MainWindow::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
+int CodeWindow::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
 {
     _id = QMainWindow::qt_metacall(_c, _id, _a);
     if (_id < 0)

@@ -36,7 +36,7 @@ CodePad::CodePad(QWidget *parent):
     //![highlighter]
 
     //![getWindow]
-    wnd = (MainWindow *)parent;
+    wnd = (CodeWindow *)parent;
     this->codec = wnd->codec;
     setup();
     //![getWindow]
@@ -190,7 +190,7 @@ int CodePad::open(const QString &fileName)
     if (!fileName.isEmpty()) {
         QFile file(fileName);
         if (!file.open(QFile::ReadWrite)) {
-            QMessageBox::warning(this, tr("QtCodePad"),
+            QMessageBox::warning(this, tr("CodeEdit"),
                                  tr("Cannot read file %1:\n%2")
                                  .arg(fileName)
                                  .arg(file.errorString()));
@@ -216,7 +216,7 @@ int CodePad::saveAs(const QString &fileName)
     if (!fileName.isEmpty()) {
         QFile file(fileName);
         if (!file.open(QFile::WriteOnly | QFile::Text)) {
-            QMessageBox::warning(this, tr("QtCodePad"),
+            QMessageBox::warning(this, tr("CodeEdit"),
                                  tr("Cannot write file %1:\n%2")
                                  .arg(fileName)
                                  .arg(file.errorString()));

@@ -26,7 +26,7 @@ class QPaintEvent;
 class QResizeEvent;
 class QSize;
 class QWidget;
-class MainWindow;
+class CodeWindow;
 QT_END_NAMESPACE
 
 class LineNumberArea;
@@ -96,7 +96,7 @@ private:
 public:
     void setup();
 private:
-    MainWindow *wnd;
+    CodeWindow *wnd;
     //![editor members]
 };
 //![codeeditordefinition]

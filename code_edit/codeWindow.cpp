@@ -25,9 +25,9 @@
 
 #include "codeEdit.h"
 
-MainWindow::MainWindow(QWidget *parent) :
+CodeWindow::CodeWindow(QWidget *parent) :
     QMainWindow(parent),
-    ui(new Ui::MainWindow)
+    ui(new Ui::CodeWindow)
 {
     ui->setupUi(this);
     // init
@@ -93,12 +93,12 @@ MainWindow::MainWindow(QWidget *parent) :
     setupEditors();
 }
 
-MainWindow::~MainWindow()
+CodeWindow::~CodeWindow()
 {
     delete ui;
 }
 
-void MainWindow::changeEvent(QEvent *e)
+void CodeWindow::changeEvent(QEvent *e)
 {
     QMainWindow::changeEvent(e);
     switch (e->type()) {
@@ -110,14 +110,14 @@ void MainWindow::changeEvent(QEvent *e)
     }
 }
 
-void MainWindow::closeEvent(QCloseEvent *e)
+void CodeWindow::closeEvent(QCloseEvent *e)
 {
     QMainWindow::closeEvent(e);
     e->ignore();
     exit();
 }
 
-void MainWindow::setupEditors()
+void CodeWindow::setupEditors()
 {
     ui->actionLineNumber->setChecked(lineNumberEnable);
     ui->actionHightlight->setChecked(highlightEnable);
@@ -128,7 +128,7 @@ void MainWindow::setupEditors()
     }
 }
 
-void MainWindow::createNewTab(CodePad *newEdit)
+void CodeWindow::createNewTab(CodePad *newEdit)
 {
     if(ui->tabWidget->count() < MAX_TAB && newEdit) {
         int tabIndex = ui->tabWidget->addTab(newEdit, NULL);
@@ -139,7 +139,7 @@ void MainWindow::createNewTab(CodePad *newEdit)
     }
 }
 
-void MainWindow::newFile()
+void CodeWindow::newFile()
 {
     // Create a new TextEdit
     CodePad *newEdit = new CodePad(this);
@@ -150,13 +150,13 @@ void MainWindow::newFile()
     ui->tabWidget->setTabText(ui->tabWidget->currentIndex(), newEdit->getTabName());
 }
 
-void MainWindow::openFile()
+void CodeWindow::openFile()
 {
     QString fileName = QFileDialog::getOpenFileName(this);
     openFile(fileName);
 }
 
-void MainWindow::openFile(const QString &fileName)
+void CodeWindow::openFile(const QString &fileName)
 {
     if (!fileName.isEmpty()) {
         CodePad *newEdit = NULL;
@@ -182,7 +182,7 @@ void MainWindow::openFile(const QString &fileName)
     }
 }
 
-int MainWindow::saveFile(CodePad *tmp)
+int CodeWindow::saveFile(CodePad *tmp)
 {
     QString fileName = tmp->getFileName();
     if (fileName.isEmpty()) {
@@ -195,7 +195,7 @@ int MainWindow::saveFile(CodePad *tmp)
     }
 }
 
-int MainWindow::saveFileAs(CodePad *tmp)
+int CodeWindow::saveFileAs(CodePad *tmp)
 {
     QString fileName = QFileDialog::getSaveFileName(
             this, tr("Save File"),
@@ -206,7 +206,7 @@ int MainWindow::saveFileAs(CodePad *tmp)
     return rt;
 }
 
-void MainWindow::saveAll()
+void CodeWindow::saveAll()
 {
     CodePad *tmp = NULL;
     for (int i=0; i<ui->tabWidget->count(); i++) {
@@ -218,13 +218,13 @@ void MainWindow::saveAll()
     }
 }
 
-int MainWindow::closeFile(CodePad *tmp)
+int CodeWindow::closeFile(CodePad *tmp)
 {
     int rt = 0;
     if (tmp) {
         if (tmp->getChanged()) {
             QMessageBox::StandardButton reply;
-            reply = QMessageBox::question(this, tr("QtCodePad"),
+            reply = QMessageBox::question(this, tr("CodeEdit"),
                                           tr("File changed.\nSave current file?"),
                                           QMessageBox::Yes | QMessageBox::No | QMessageBox::Cancel);
             if (reply == QMessageBox::Yes) {
@@ -243,7 +243,7 @@ int MainWindow::closeFile(CodePad *tmp)
     return rt;
 }
 
-int MainWindow::closeAll()
+int CodeWindow::closeAll()
 {
     CodePad *tmp = (CodePad *)ui->tabWidget->currentWidget();
     int rt = 0;
@@ -257,20 +257,20 @@ int MainWindow::closeAll()
     return rt;
 }
 
-void MainWindow::exit()
+void CodeWindow::exit()
 {
     if (closeAll() == 0)
         qApp->exit();
 }
 
-void MainWindow::tabTextChange()
+void CodeWindow::tabTextChange()
 {
     CodePad *tmp = (CodePad *)ui->tabWidget->currentWidget();
     tmp->setChanged(true);
     ui->tabWidget->setTabText(ui->tabWidget->currentIndex(), tmp->getTabName() + "*");
 }
 
-void MainWindow::setupMenu()
+void CodeWindow::setupMenu()
 {
     if(ui->tabWidget->count()) {
         ui->actionSave->setEnabled(true);
@@ -297,7 +297,7 @@ void MainWindow::setupMenu()
     }
 }
 
-void MainWindow::setCurrentFile(const QString &fileName)
+void CodeWindow::setCurrentFile(const QString &fileName)
 {
     QSettings settings("./config.ini", QSettings::IniFormat);
     QStringList files = settings.value("RecentFiles/list").toStringList();
@@ -310,13 +310,13 @@ void MainWindow::setCurrentFile(const QString &fileName)
 
     foreach (QWidget *widget, QApplication::topLevelWidgets())
     {
-        MainWindow *mainWin = qobject_cast<MainWindow *>(widget);
+        CodeWindow *mainWin = qobject_cast<CodeWindow *>(widget);
         if (mainWin)
             mainWin->updateRecentFileActions();
     }
 }
 
-void MainWindow::updateRecentFileActions()
+void CodeWindow::updateRecentFileActions()
 {
     QSettings settings("./config.ini", QSettings::IniFormat);
     QStringList files = settings.value("RecentFiles/list").toStringList();
@@ -343,7 +343,7 @@ void MainWindow::updateRecentFileActions()
         noRecentFile->setVisible(false);
 }
 
-void MainWindow::openRecentFile()
+void CodeWindow::openRecentFile()
 {
     QAction *action = qobject_cast<QAction *>(sender());
     if (action) {
@@ -351,7 +351,7 @@ void MainWindow::openRecentFile()
     }
 }
 
-void MainWindow::findCodecs()
+void CodeWindow::findCodecs()
 {
     QMap<QString, QTextCodec *> codecMap;
     QRegExp iso8859RegExp("ISO[- ]8859-([0-9]+).*");
@@ -381,7 +381,7 @@ void MainWindow::findCodecs()
     codecs = codecMap.values();
 }
 
-void MainWindow::setupCodec() {
+void CodeWindow::setupCodec() {
     QAction *action = qobject_cast<QAction *>(sender());
     if (action) {
         CodePad *tmp = (CodePad *)ui->tabWidget->currentWidget();
@@ -394,62 +394,51 @@ void MainWindow::setupCodec() {
     }
 }
 
-void MainWindow::on_actionExit_triggered()
+void CodeWindow::on_actionExit_triggered()
 {
     exit();
 }
 
-void MainWindow::on_actionAbout_triggered()
+void CodeWindow::on_actionAbout_triggered()
 {
-    QMessageBox::about(this, tr("About QtCodePad"),
-                       tr( "<b>QtCodePad</b>  Version 1.0.0<br><br>" \
-                           "Copyright (C) 2010 Ninsun<br><br>" \
-                           "This program is free software: you can redistribute it and/or modify" \
-                           "it under the terms of the GNU General Public License as published by" \
-                           "the Free Software Foundation, either version 3 of the License, or" \
-                           "(at your option) any later version.<br><br>" \
-                           "This program is distributed in the hope that it will be useful," \
-                           "but WITHOUT ANY WARRANTY; without even the implied warranty of" \
-                           "MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the" \
-                           "GNU General Public License for more details.<br><br>" \
-                           "You should have received a copy of the GNU General Public License"\
-                           "along with this program. " \
-                           "If not, see <a href=\"http://www.gnu.org/licenses/\">http://www.gnu.org/licenses/</a>."));
+    QMessageBox::about(this, tr("About CodeEdit"),
+                       tr( "<b>CodeEdit</b>  Version 1.0.0<br><br>" \
+                           "Copyright (C) 2014 ZhangRui<br><br>"));
 }
 
-void MainWindow::on_actionAboutQt_triggered()
+void CodeWindow::on_actionAboutQt_triggered()
 {
     qApp->aboutQt();
 }
 
-void MainWindow::on_tabWidget_tabCloseRequested(int index)
+void CodeWindow::on_tabWidget_tabCloseRequested(int index)
 {
 //    if(ui->tabWidget->count() == 1)
 //        return;
     closeFile((CodePad *)ui->tabWidget->widget(index));
 }
 
-void MainWindow::on_actionNew_triggered()
+void CodeWindow::on_actionNew_triggered()
 {
     newFile();
 }
 
-void MainWindow::on_actionOpen_triggered()
+void CodeWindow::on_actionOpen_triggered()
 {
     openFile();
 }
 
-void MainWindow::on_actionClose_triggered()
+void CodeWindow::on_actionClose_triggered()
 {
     closeFile((CodePad *)ui->tabWidget->currentWidget());
 }
 
-void MainWindow::on_actionCloseAll_triggered()
+void CodeWindow::on_actionCloseAll_triggered()
 {
     closeAll();
 }
 
-void MainWindow::on_actionSave_triggered()
+void CodeWindow::on_actionSave_triggered()
 {
     CodePad *tmp = (CodePad *)ui->tabWidget->currentWidget();
     if (saveFile(tmp) == 0) {
@@ -457,7 +446,7 @@ void MainWindow::on_actionSave_triggered()
     }
 }
 
-void MainWindow::on_actionSaveAs_triggered()
+void CodeWindow::on_actionSaveAs_triggered()
 {
     CodePad *tmp = (CodePad *)ui->tabWidget->currentWidget();
     if (saveFileAs(tmp) == 0) {
@@ -465,37 +454,37 @@ void MainWindow::on_actionSaveAs_triggered()
     }
 }
 
-void MainWindow::on_actionUndo_triggered()
+void CodeWindow::on_actionUndo_triggered()
 {
     ((CodePad *)ui->tabWidget->currentWidget())->undo();
 }
 
-void MainWindow::on_actionRedo_triggered()
+void CodeWindow::on_actionRedo_triggered()
 {
     ((CodePad *)ui->tabWidget->currentWidget())->redo();
 }
 
-void MainWindow::on_actionCut_triggered()
+void CodeWindow::on_actionCut_triggered()
 {
     ((CodePad *)ui->tabWidget->currentWidget())->cut();
 }
 
-void MainWindow::on_actionCopy_triggered()
+void CodeWindow::on_actionCopy_triggered()
 {
     ((CodePad *)ui->tabWidget->currentWidget())->copy();
 }
 
-void MainWindow::on_actionPaste_triggered()
+void CodeWindow::on_actionPaste_triggered()
 {
     ((CodePad *)ui->tabWidget->currentWidget())->paste();
 }
 
-void MainWindow::on_actionSaveAll_triggered()
+void CodeWindow::on_actionSaveAll_triggered()
 {
     saveAll();
 }
 
-void MainWindow::on_tabWidget_currentChanged(int index)
+void CodeWindow::on_tabWidget_currentChanged(int index)
 {
     setupMenu();
 
@@ -508,7 +497,7 @@ void MainWindow::on_tabWidget_currentChanged(int index)
     ui->statusBar->update();
 }
 
-void MainWindow::on_actionWordWrap_triggered(bool checked)
+void CodeWindow::on_actionWordWrap_triggered(bool checked)
 {
     if(checked)
         wrapMode = QTextOption::WrapAtWordBoundaryOrAnywhere;
@@ -517,25 +506,25 @@ void MainWindow::on_actionWordWrap_triggered(bool checked)
     setupEditors();
 }
 
-void MainWindow::on_actionHightlight_triggered(bool checked)
+void CodeWindow::on_actionHightlight_triggered(bool checked)
 {
     highlightEnable = checked;
     setupEditors();
 }
 
-void MainWindow::on_actionLineNumber_triggered(bool checked)
+void CodeWindow::on_actionLineNumber_triggered(bool checked)
 {
     lineNumberEnable = checked;
     setupEditors();
 }
 
-void MainWindow::on_actionHightlightCurrentLine_triggered(bool checked)
+void CodeWindow::on_actionHightlightCurrentLine_triggered(bool checked)
 {
     currentLineEnable = checked;
     setupEditors();
 }
 
-void MainWindow::on_actionFont_triggered()
+void CodeWindow::on_actionFont_triggered()
 {
     bool ok;
     QFont font = QFontDialog::getFont(&ok, this->font, this);
