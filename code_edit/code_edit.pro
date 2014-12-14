@@ -13,6 +13,4 @@ FORMS += \
     codeWindow.ui
 
 RESOURCES += \
-    res.qrc \
-    res.qrc \
     res.qrc
