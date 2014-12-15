@@ -1,7 +1,7 @@
 /****************************************************************************
 ** Meta object code from reading C++ file 'codeWindow.h'
 **
-** Created: Sun Dec 14 13:51:04 2014
+** Created: Mon Dec 15 16:04:59 2014
 **      by: The Qt Meta Object Compiler version 63 (Qt 4.8.1)
 **
 ** WARNING! All changes made in this file will be lost!
@@ -23,7 +23,7 @@ static const uint qt_meta_data_CodeWindow[] = {
        6,       // revision
        0,       // classname
        0,    0, // classinfo
-      26,   14, // methods
+      27,   14, // methods
        0,    0, // properties
        0,    0, // enums/sets
        0,    0, // constructors
@@ -57,6 +57,7 @@ static const uint qt_meta_data_CodeWindow[] = {
      693,   11,   11,   11, 0x08,
      705,   11,   11,   11, 0x08,
      722,   11,   11,   11, 0x08,
+     735,   11,   11,   11, 0x08,
 
        0        // eod
 };
@@ -85,6 +86,7 @@ static const char qt_meta_stringdata_CodeWindow[] = {
     "on_actionAbout_triggered()\0"
     "on_actionExit_triggered()\0tabTextChange()\0"
     "setupMenu()\0openRecentFile()\0setupCodec()\0"
+    "doCursorChanged()\0"
 };
 
 void CodeWindow::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id, void **_a)
@@ -119,6 +121,7 @@ void CodeWindow::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id, 
         case 23: _t->setupMenu(); break;
         case 24: _t->openRecentFile(); break;
         case 25: _t->setupCodec(); break;
+        case 26: _t->doCursorChanged(); break;
         default: ;
         }
     }
@@ -156,9 +159,9 @@ int CodeWindow::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
     if (_id < 0)
         return _id;
     if (_c == QMetaObject::InvokeMetaMethod) {
-        if (_id < 26)
+        if (_id < 27)
             qt_static_metacall(this, _c, _id, _a);
-        _id -= 26;
+        _id -= 27;
     }
     return _id;
 }

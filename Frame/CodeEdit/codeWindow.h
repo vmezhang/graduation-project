@@ -113,6 +113,8 @@ private slots:
 
     void openRecentFile();
     void setupCodec();
+
+    void doCursorChanged();
     //![custom functions]
 };
 

@@ -87,8 +87,6 @@ CodeWindow::CodeWindow(QWidget *parent) :
     currentLineEnable = true;
     //![default settings]
 
-//    newFile();
-
     setupMenu();
     setupEditors();
 }
@@ -134,6 +132,7 @@ void CodeWindow::createNewTab(CodePad *newEdit)
         ui->tabWidget->setCurrentIndex(tabIndex);
         // connect signal & slot
         connect(newEdit, SIGNAL(textChanged()), this, SLOT(tabTextChange()));
+        connect(ui->tabWidget->currentWidget(), SIGNAL(cursorPositionChanged()), this, SLOT(doCursorChanged()));
     }
 }
 
@@ -238,6 +237,10 @@ int CodeWindow::closeFile(CodePad *tmp)
             tmp = NULL;
         }
     }
+    else {
+        labelLineRow.setText(tr(" Ln:0 Col:0 "));
+        ui->statusBar->update();
+    }
     return rt;
 }
 
@@ -252,6 +255,8 @@ int CodeWindow::closeAll()
         else
             tmp = (CodePad *)ui->tabWidget->currentWidget();
     }
+    labelLineRow.setText(tr(" Ln:0 Col:0 "));
+    ui->statusBar->update();
     return rt;
 }
 
@@ -266,6 +271,25 @@ void CodeWindow::tabTextChange()
     CodePad *tmp = (CodePad *)ui->tabWidget->currentWidget();
     tmp->setChanged(true);
     ui->tabWidget->setTabText(ui->tabWidget->currentIndex(), tmp->getTabName() + "*");
+}
+
+void CodeWindow::doCursorChanged()
+{
+    CodePad *tmp = (CodePad *)ui->tabWidget->currentWidget();
+    // 获取文本中的光标
+    const QTextCursor cursor = tmp->textCursor();
+    if (tmp) {
+        int rowNum = cursor.blockNumber() + 1;
+        // 获取光标所在的列数
+        int colNum = cursor.columnNumber();
+        // 更新状态栏光标所在的位置
+        labelLineRow.setText(tr(" Ln:%1 Col:%2 ").arg(rowNum).arg(colNum));
+        ui->statusBar->update();
+    }
+    else {
+        labelLineRow.setText(tr(" Ln:0 Col:0 "));
+        ui->statusBar->update();
+    }
 }
 
 void CodeWindow::setupMenu()
@@ -411,9 +435,11 @@ void CodeWindow::on_actionAboutQt_triggered()
 
 void CodeWindow::on_tabWidget_tabCloseRequested(int index)
 {
-//    if(ui->tabWidget->count() == 1)
-//        return;
     closeFile((CodePad *)ui->tabWidget->widget(index));
+    if(ui->tabWidget->count() == 0) {
+        labelLineRow.setText(tr(" Ln:0 Col:0 "));
+        ui->statusBar->update();
+    }
 }
 
 void CodeWindow::on_actionNew_triggered()
