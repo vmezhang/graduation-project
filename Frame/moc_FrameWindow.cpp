@@ -1,7 +1,7 @@
 /****************************************************************************
 ** Meta object code from reading C++ file 'FrameWindow.h'
 **
-** Created: Mon Dec 15 16:04:58 2014
+** Created: Fri Mar 20 13:59:37 2015
 **      by: The Qt Meta Object Compiler version 63 (Qt 4.8.1)
 **
 ** WARNING! All changes made in this file will be lost!

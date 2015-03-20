@@ -1,7 +1,7 @@
 /********************************************************************************
 ** Form generated from reading UI file 'codeWindow.ui'
 **
-** Created: Sun Dec 14 16:28:21 2014
+** Created: Fri Mar 20 13:59:20 2015
 **      by: Qt User Interface Compiler version 4.8.1
 **
 ** WARNING! All changes made in this file will be lost when recompiling UI file!
