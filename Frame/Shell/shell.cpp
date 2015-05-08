@@ -57,6 +57,7 @@ QString ShellEdit::runCommand(const QString &cmd)
     qcmd = file.readAll();
     return qcmd;
 
+    // 后续添加自定义系统调用
     // return QString("%1:命令不存在").arg(cmd);
 }
 
