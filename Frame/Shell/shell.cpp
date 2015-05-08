@@ -42,7 +42,7 @@ void ShellEdit::resizeEvent(QResizeEvent *e)
 
 QString ShellEdit::runCommand(const QString &cmd)
 {
-    /*
+
     // 调用系统中的命令
     QByteArray temp = cmd.toLatin1();
     char *cmd2 = temp.data();
@@ -56,8 +56,8 @@ QString ShellEdit::runCommand(const QString &cmd)
     QString qcmd;
     qcmd = file.readAll();
     return qcmd;
-    */
-    return QString("%1:命令不存在").arg(cmd);
+
+    // return QString("%1:命令不存在").arg(cmd);
 }
 
 
