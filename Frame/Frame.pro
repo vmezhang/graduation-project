@@ -4,7 +4,9 @@ HEADERS += \
     CodeEdit/highlight.h \
     CodeEdit/codeWindow.h \
     CodeEdit/codeEdit.h \
-    Shell/shell.h
+    Shell/shell.h \
+    monitor/dataclass.h \
+    monitor/monitor.h
 
 SOURCES += \
     main.cpp \
@@ -12,10 +14,12 @@ SOURCES += \
     CodeEdit/highlight.cpp \
     CodeEdit/codeWindow.cpp \
     CodeEdit/codeEdit.cpp \
-    Shell/shell.cpp
+    Shell/shell.cpp \
+    monitor/monitor.cpp
 
 RESOURCES += \
     source.qrc \
 
 FORMS += \
-    CodeEdit/codeWindow.ui
+    CodeEdit/codeWindow.ui \
+    monitor/monitor.ui

@@ -22,6 +22,7 @@
 
 #include "Shell/shell.h"
 #include "CodeEdit/codeWindow.h"
+#include "monitor/monitor.h"
 
 #define MAX_TAB 64
 
@@ -44,6 +45,8 @@ private slots:
     void newTerminal();
     // 打开编辑器
     void newEdit();
+    // 打开监控
+    void newMonitor();
     // 关闭标签页
     void removeShellTab(int index);
     // 关闭所有终端
@@ -80,6 +83,8 @@ private:
     QAction *newTerminalAction;
     // 打开编辑器动作
     QAction *newEditAction;
+    // 打开监控动作
+    QAction *newMonitorAction;
     // 关闭所有终端动作
     QAction *closeAllShellAction;
     // 退出动作
@@ -100,6 +105,9 @@ private:
 
     // codeEdit
     CodeWindow edit;
+    // monitor
+    monitor view;
+
     QMainWindow guide;
     QMainWindow aboutus;
 

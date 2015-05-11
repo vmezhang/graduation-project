@@ -42,6 +42,7 @@ void ShellEdit::resizeEvent(QResizeEvent *e)
 
 QString ShellEdit::runCommand(const QString &cmd)
 {
+
     /*
     // 调用系统中的命令
     QByteArray temp = cmd.toLatin1();

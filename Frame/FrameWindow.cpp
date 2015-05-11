@@ -48,7 +48,7 @@ void MainWindow::createAction()
 {
     // 动作打开终端
     newTerminalAction = new QAction(tr("&终端"), this);
-    newTerminalAction->setIcon(QIcon(":/res/images/1.png"));
+    newTerminalAction->setIcon(QIcon(":/res/images/terminal.png"));
     // 快捷键ctrl+n
     newTerminalAction->setShortcut(QKeySequence::New);
     // 提示
@@ -61,6 +61,13 @@ void MainWindow::createAction()
     newEditAction->setShortcut(tr("Ctrl+E"));
     newEditAction->setStatusTip(tr("打开程序编辑器"));
     connect(newEditAction, SIGNAL(triggered()), this, SLOT(newEdit()));
+
+    // 动作打开监控
+    newMonitorAction = new QAction(tr("&监控器"), this);
+    newMonitorAction->setIcon(QIcon(":/res/images/1.png"));
+    newMonitorAction->setShortcut(tr("Ctrl+M"));
+    newMonitorAction->setStatusTip(tr("打开监控器"));
+    connect(newMonitorAction, SIGNAL(triggered()), this, SLOT(newMonitor()));
 
     // 动作关闭所有终端
     closeAllShellAction = new QAction(tr("&关闭所有终端"), this);
@@ -92,6 +99,7 @@ void MainWindow::createMenus()
                            QMenu::item:selected{color:#000000;background:#E0EEEE}");
     newMenu->addAction(newTerminalAction);
     newMenu->addAction(newEditAction);
+    newMenu->addAction(newMonitorAction);
     newMenu->addSeparator();
     newMenu->addAction(closeAllShellAction);
     newMenu->addAction(exitAction);
@@ -111,6 +119,7 @@ void MainWindow::createToolBars()
     addThing->setIconSize(QSize(40, 40));
     addThing->addAction(newTerminalAction);
     addThing->addAction(newEditAction);
+    addThing->addAction(newMonitorAction);
 
     // 帮助工具栏
     Help = addToolBar(tr("&help"));
@@ -159,6 +168,14 @@ void MainWindow::newEdit()
     edit.resize(500, 350);
     edit.show();
     edit.move((QApplication::desktop()->width() - edit.width()) >> 1,
+                        (QApplication::desktop()->height() - edit.height()) >> 1);
+}
+
+void MainWindow::newMonitor()
+{
+    // 打开监控器
+    view.show();
+    view.move((QApplication::desktop()->width() - edit.width()) >> 1,
                         (QApplication::desktop()->height() - edit.height()) >> 1);
 }
 
