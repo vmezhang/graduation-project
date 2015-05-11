@@ -1,32 +1,33 @@
-cmd.txt
-CodeEdit
-codeEdit.o
-codeWindow.o
-config.ini
-Frame
-Frame.pro
-Frame.pro.user
-FrameWindow.cpp
-FrameWindow.h
-FrameWindow.o
-highlight.o
-main.cpp
-main.o
-Makefile
-moc_codeEdit.cpp
-moc_codeEdit.o
-moc_codeWindow.cpp
-moc_codeWindow.o
-moc_FrameWindow.cpp
-moc_FrameWindow.o
-moc_highlight.cpp
-moc_highlight.o
-moc_shell.cpp
-moc_shell.o
-qrc_source.cpp
-qrc_source.o
-res
-Shell
-shell.o
-source.qrc
-ui_codeWindow.h
+总用量 1748
+-rw-rw-r-- 1 zhangrui zhangrui      0  5月 11 11:33 cmd.txt
+drwxrwxr-x 2 zhangrui zhangrui   4096  5月 11 09:59 CodeEdit
+-rw-rw-r-- 1 zhangrui zhangrui  27172  5月 11 11:32 codeEdit.o
+-rw-rw-r-- 1 zhangrui zhangrui  67248  5月 11 11:32 codeWindow.o
+-rw-rw-r-- 1 zhangrui zhangrui    318  5月 11 09:59 config.ini
+-rwxrwxr-x 1 zhangrui zhangrui 343591  5月 11 11:32 Frame
+-rw-rw-r-- 1 zhangrui zhangrui    376  5月 11 09:59 Frame.pro
+-rw-rw-r-- 1 zhangrui zhangrui  27069  5月 11 11:32 Frame.pro.user
+-rw-rw-r-- 1 zhangrui zhangrui   5888  5月 11 09:59 FrameWindow.cpp
+-rw-rw-r-- 1 zhangrui zhangrui   2172  5月 11 09:59 FrameWindow.h
+-rw-rw-r-- 1 zhangrui zhangrui  14528  5月 11 11:31 FrameWindow.o
+-rw-rw-r-- 1 zhangrui zhangrui  32404  5月 11 11:32 highlight.o
+-rw-rw-r-- 1 zhangrui zhangrui   1247  5月 11 09:59 main.cpp
+-rw-rw-r-- 1 zhangrui zhangrui   5564  5月 11 11:31 main.o
+-rw-rw-r-- 1 zhangrui zhangrui  11267  5月 11 09:59 Makefile
+-rw-rw-r-- 1 zhangrui zhangrui   3262  5月 11 11:32 moc_codeEdit.cpp
+-rw-rw-r-- 1 zhangrui zhangrui   7932  5月 11 11:32 moc_codeEdit.o
+-rw-rw-r-- 1 zhangrui zhangrui   6242  5月 11 11:32 moc_codeWindow.cpp
+-rw-rw-r-- 1 zhangrui zhangrui  10772  5月 11 11:32 moc_codeWindow.o
+-rw-rw-r-- 1 zhangrui zhangrui   3369  5月 11 11:32 moc_FrameWindow.cpp
+-rw-rw-r-- 1 zhangrui zhangrui   9356  5月 11 11:32 moc_FrameWindow.o
+-rw-rw-r-- 1 zhangrui zhangrui   2401  5月 11 11:32 moc_highlight.cpp
+-rw-rw-r-- 1 zhangrui zhangrui   7084  5月 11 11:32 moc_highlight.o
+-rw-rw-r-- 1 zhangrui zhangrui   2789  5月 11 11:32 moc_shell.cpp
+-rw-rw-r-- 1 zhangrui zhangrui   8504  5月 11 11:32 moc_shell.o
+-rw-rw-r-- 1 zhangrui zhangrui 911697  5月 11 11:32 qrc_source.cpp
+-rw-rw-r-- 1 zhangrui zhangrui 186100  5月 11 11:32 qrc_source.o
+drwxrwxr-x 5 zhangrui zhangrui   4096  5月 11 09:59 res
+drwxrwxr-x 2 zhangrui zhangrui   4096  5月 11 09:59 Shell
+-rw-rw-r-- 1 zhangrui zhangrui   7752  5月 11 11:32 shell.o
+-rw-rw-r-- 1 zhangrui zhangrui    870  5月 11 09:59 source.qrc
+-rw-rw-r-- 1 zhangrui zhangrui  16446  5月 11 11:31 ui_codeWindow.h
