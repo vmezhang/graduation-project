@@ -74,8 +74,7 @@ void monitor::DisplayCpuInfo()
      pCPUtable->setItem(0,4,new QTableWidgetItem("Cache(KB)"));
 
 
-     for(int i=0;i<cpu_info.CpuNum;i++)
-     {
+     for(int i=0;i<cpu_info.CpuNum;i++) {
          ostringstream o_temp;
          o_temp<<i;
 
@@ -110,10 +109,10 @@ void monitor::DisplayMemInfo()
 
 void monitor::DisplayLoadInfo()
 {
-            TestLoadInfo();
-            ui->lcdNumber_2->display(load_info.m_OneMin);
-            ui->lcdNumber_3->display(load_info.m_FivMin);
-            ui->lcdNumber_1->display(load_info.m_FiftMin);
+    TestLoadInfo();
+    ui->lcdNumber_2->display(load_info.m_OneMin);
+    ui->lcdNumber_3->display(load_info.m_FivMin);
+    ui->lcdNumber_1->display(load_info.m_FiftMin);
 }
 
 void TestBasicInfo()
@@ -132,23 +131,19 @@ void TestBasicInfo()
 
     ifstream infile3("/proc/cpuinfo");
 
-    while(infile3>>word)
-    {
-        if(word=="name")
-        {
+    while(infile3>>word) {
+        if(word=="name") {
             infile3>>word;
             infile3>>word;
             basic_info.cpu_name = word; // intel
 
-            while(infile3>>word&&word!="stepping")
-            {
+            while(infile3>>word&&word!="stepping") {
 
                     basic_info.cpu_name+=" ";
                     basic_info.cpu_name+= word; // pentium
 
             }
             break;
-
         }
 
     }
@@ -163,30 +158,25 @@ void TestCpuInfo()
     cpu_info.CpuNum = 0;
 
 
-    while(infile>>word)
-    {
-        if(word=="processor")
-        {
+    while(infile>>word) {
+        if(word=="processor") {
             cpu_info.CpuNum++;
             continue;
         }
 
-        if(word=="vendor_id")
-        {
+        if(word=="vendor_id") {
             infile>>word;
             infile>>word;
             cpu_info.name = word;
             continue;
         }
-        if(word=="MHz")
-        {
+        if(word=="MHz") {
             infile>>word;
             infile>>word;
             cpu_info.freq = word;
             continue;
         }
-        if(word=="cache")
-        {
+        if(word=="cache") {
             infile>>word;
             infile>>word;
             infile>>word;
@@ -204,14 +194,12 @@ void TestMemInfo()
 
     // search the function to switch between string and int
 
-    while(infile>>word)
-    {
+    while(infile>>word) {
 
         istringstream in_temp;
         ostringstream o_temp;
 
-        if(word=="MemTotal:")
-        {
+        if(word=="MemTotal:") {
             infile>>word;
             mem_infoKB.MemTotal = word;
             in_temp.clear();
@@ -221,8 +209,7 @@ void TestMemInfo()
             mem_infoMB.MemTotal = o_temp.str();
             continue;
         }
-        if(word=="MemFree:")
-        {
+        if(word=="MemFree:") {
             infile>>word;
             mem_infoKB.MemFree = word;
             in_temp.clear();
@@ -232,8 +219,7 @@ void TestMemInfo()
             mem_infoMB.MemFree = o_temp.str();
             continue;
         }
-        if(word=="Buffers:")
-        {
+        if(word=="Buffers:") {
             infile>>word;
             mem_infoKB.Buffers = word;
             in_temp.clear();
@@ -243,8 +229,7 @@ void TestMemInfo()
             mem_infoMB.Buffers = o_temp.str();
             continue;
         }
-        if(word=="Cached:")
-        {
+        if(word=="Cached:") {
             infile>>word;
             mem_infoKB.Cached = word;
             in_temp.clear();
@@ -254,8 +239,7 @@ void TestMemInfo()
             mem_infoMB.Cached =o_temp.str() ;
             continue;
         }
-        if(word=="SwapTotal:")
-        {
+        if(word=="SwapTotal:") {
             infile>>word;
             mem_infoKB.SwapTotal = word;
             in_temp.clear();
@@ -265,8 +249,7 @@ void TestMemInfo()
             mem_infoMB.SwapTotal = o_temp.str();
             continue;
         }
-        if(word=="SwapFree:")
-        {
+        if(word=="SwapFree:") {
             infile>>word;
             mem_infoKB.SwapFree = word;
             in_temp.clear();

@@ -21,7 +21,7 @@
 
 using namespace std;
 
-class CpuInfo{
+class CpuInfo {
 
 public:
     int CpuNum;
@@ -31,7 +31,7 @@ public:
 
 };
 
-class MemInfo{
+class MemInfo {
 public:
     string MemTotal;
     string MemFree;
@@ -41,14 +41,14 @@ public:
     string SwapFree;
 };
 
-class LoadInfo{
+class LoadInfo {
 public:
     double m_OneMin;
     double m_FivMin;
     double m_FiftMin;
 };
 
-class BasicInfo{
+class BasicInfo {
 public:
     string hostname;
     string kernel_version;
