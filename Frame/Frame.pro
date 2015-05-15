@@ -6,7 +6,8 @@ HEADERS += \
     CodeEdit/codeEdit.h \
     Shell/shell.h \
     monitor/dataclass.h \
-    monitor/monitor.h
+    monitor/monitor.h \
+    Shell/testShell.h
 
 SOURCES += \
     main.cpp \
