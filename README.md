@@ -7,10 +7,8 @@ about graduation project
 
 ============================================
 
-Frame: 主框架;
+Frame: 完整程序部分(包括编辑器，shell，系统状态等);
 
-code_edit:编辑器;
+code_edit: 编辑器模块(单独测试)
 
-myshell:shell窗口模块;
-
-doc:文档;
+myshell: shell窗口模块(单独测试);
