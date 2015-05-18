@@ -1,0 +1,134 @@
+USER       PID %CPU %MEM    VSZ   RSS TTY      STAT START   TIME COMMAND
+root         1  0.0  0.0   3668  2024 ?        Ss   11:07   0:01 /sbin/init
+root         2  0.0  0.0      0     0 ?        S    11:07   0:00 [kthreadd]
+root         3  0.0  0.0      0     0 ?        S    11:07   0:08 [ksoftirqd/0]
+root         5  0.0  0.0      0     0 ?        S<   11:07   0:00 [kworker/0:0H]
+root         6  0.0  0.0      0     0 ?        S    11:07   0:00 [kworker/u8:0]
+root         7  0.0  0.0      0     0 ?        S    11:07   0:00 [rcu_sched]
+root         8  0.0  0.0      0     0 ?        S    11:07   0:00 [rcu_bh]
+root         9  0.0  0.0      0     0 ?        S    11:07   0:00 [migration/0]
+root        10  0.0  0.0      0     0 ?        S    11:07   0:00 [watchdog/0]
+root        11  0.0  0.0      0     0 ?        S    11:07   0:00 [watchdog/1]
+root        12  0.0  0.0      0     0 ?        S    11:07   0:00 [migration/1]
+root        13  0.0  0.0      0     0 ?        S    11:07   0:05 [ksoftirqd/1]
+root        15  0.0  0.0      0     0 ?        S<   11:07   0:00 [kworker/1:0H]
+root        16  0.0  0.0      0     0 ?        S<   11:07   0:00 [khelper]
+root        17  0.0  0.0      0     0 ?        S    11:07   0:00 [kdevtmpfs]
+root        18  0.0  0.0      0     0 ?        S<   11:07   0:00 [netns]
+root        19  0.0  0.0      0     0 ?        S<   11:07   0:00 [writeback]
+root        20  0.0  0.0      0     0 ?        S<   11:07   0:00 [kintegrityd]
+root        21  0.0  0.0      0     0 ?        S<   11:07   0:00 [bioset]
+root        22  0.0  0.0      0     0 ?        S<   11:07   0:00 [kworker/u9:0]
+root        23  0.0  0.0      0     0 ?        S<   11:07   0:00 [kblockd]
+root        24  0.0  0.0      0     0 ?        S<   11:07   0:00 [ata_sff]
+root        25  0.0  0.0      0     0 ?        S    11:07   0:00 [khubd]
+root        26  0.0  0.0      0     0 ?        S<   11:07   0:00 [md]
+root        27  0.0  0.0      0     0 ?        S<   11:07   0:00 [devfreq_wq]
+root        28  0.0  0.0      0     0 ?        S    11:07   0:01 [kworker/0:1]
+root        30  0.0  0.0      0     0 ?        S    11:07   0:00 [khungtaskd]
+root        31  0.0  0.0      0     0 ?        S    11:07   0:00 [kswapd0]
+root        32  0.0  0.0      0     0 ?        SN   11:07   0:00 [ksmd]
+root        33  0.0  0.0      0     0 ?        SN   11:07   0:00 [khugepaged]
+root        34  0.0  0.0      0     0 ?        S    11:07   0:00 [fsnotify_mark]
+root        35  0.0  0.0      0     0 ?        S    11:07   0:00 [ecryptfs-kthrea]
+root        36  0.0  0.0      0     0 ?        S<   11:07   0:00 [crypto]
+root        48  0.0  0.0      0     0 ?        S<   11:07   0:00 [kthrotld]
+root        50  0.0  0.0      0     0 ?        S    11:07   0:00 [scsi_eh_0]
+root        51  0.0  0.0      0     0 ?        S    11:07   0:00 [scsi_eh_1]
+root        73  0.0  0.0      0     0 ?        S<   11:07   0:00 [deferwq]
+root        74  0.0  0.0      0     0 ?        S<   11:07   0:00 [charger_manager]
+root        75  0.0  0.0      0     0 ?        S    11:07   0:01 [kworker/1:2]
+root       271  0.0  0.0      0     0 ?        S<   11:07   0:00 [kworker/u9:1]
+root       272  0.0  0.0      0     0 ?        S    11:07   0:00 [jbd2/sda9-8]
+root       273  0.0  0.0      0     0 ?        S<   11:07   0:00 [ext4-rsv-conver]
+root       363  0.0  0.0   2836   612 ?        S    11:07   0:00 upstart-udev-bridge --daemon
+root       365  0.0  0.0   3280  1548 ?        Ss   11:07   0:00 /sbin/udevd --daemon
+root       714  0.0  0.0      0     0 ?        S<   11:07   0:00 [kpsmoused]
+root       717  0.0  0.0      0     0 ?        S    11:07   0:00 [kworker/0:2]
+root       748  0.0  0.0      0     0 ?        S<   11:07   0:00 [hd-audio0]
+root       779  0.0  0.0   2848   356 ?        S    11:07   0:00 upstart-socket-bridge --daemon
+root       835  0.0  0.0      0     0 ?        S    11:07   0:00 [jbd2/sda8-8]
+root       836  0.0  0.0      0     0 ?        S<   11:07   0:00 [ext4-rsv-conver]
+root       856  0.0  0.0      0     0 ?        S    11:07   0:00 [jbd2/sda10-8]
+root       857  0.0  0.0      0     0 ?        S<   11:07   0:00 [ext4-rsv-conver]
+syslog     884  0.0  0.0  31060  1572 ?        Sl   11:07   0:00 rsyslogd -c5
+102        909  0.0  0.0   3836  1672 ?        Ss   11:07   0:00 dbus-daemon --system --fork --activation=upstart
+root       938  0.0  0.1   7220  2812 ?        Ss   11:07   0:00 /usr/sbin/modem-manager
+root       969  0.0  0.0   4744  1640 ?        Ss   11:07   0:00 /usr/sbin/bluetoothd
+avahi      977  0.0  0.0   3456  1496 ?        S    11:07   0:00 avahi-daemon: running [kagura.local]
+avahi      978  0.0  0.0   3456   432 ?        S    11:07   0:00 avahi-daemon: chroot helper
+root       981  0.0  0.1  11080  3532 ?        Ss   11:07   0:00 /usr/sbin/cupsd -F
+root       991  0.0  0.0      0     0 ?        S<   11:07   0:00 [krfcommd]
+root      1010  0.0  0.3  32512  6996 ?        Ssl  11:07   0:00 NetworkManager
+root      1018  0.0  0.0   4628   872 tty4     Ss+  11:07   0:00 /sbin/getty -8 38400 tty4
+root      1025  0.0  0.0   4628   868 tty5     Ss+  11:07   0:00 /sbin/getty -8 38400 tty5
+root      1034  0.0  0.0   4628   876 tty2     Ss+  11:07   0:00 /sbin/getty -8 38400 tty2
+root      1035  0.0  0.0   4628   864 tty3     Ss+  11:07   0:00 /sbin/getty -8 38400 tty3
+root      1037  0.0  0.0   4628   868 tty6     Ss+  11:07   0:00 /sbin/getty -8 38400 tty6
+daemon    1050  0.0  0.0   2468   348 ?        Ss   11:07   0:00 atd
+root      1051  0.0  0.0   2616   940 ?        Ss   11:07   0:00 cron
+root      1055  0.0  0.1  34040  3136 ?        Ssl  11:07   0:00 lightdm
+root      1059  0.0  0.0   3600   648 ?        Ss   11:07   0:02 /usr/sbin/irqbalance
+root      1066  0.0  0.0   2172   712 ?        Ss   11:07   0:00 acpid -c /etc/acpi/events -s /var/run/acpid.socket
+root      1082  0.0  0.2  25396  5864 ?        Sl   11:07   0:00 /usr/lib/policykit-1/polkitd --no-debug
+root      1097  0.0  0.9  80444 18996 tty7     Rsl+ 11:07   0:16 /usr/bin/X :0 -auth /var/run/lightdm/root/:0 -nolisten tcp vt7 -novtswitch -background none
+whoopsie  1116  0.0  0.2  26032  4572 ?        Ssl  11:07   0:00 whoopsie
+root      1118  0.0  0.1  30132  3352 ?        Sl   11:07   0:00 /usr/sbin/console-kit-daemon --no-daemon
+root      1303  0.0  0.0   4628   860 tty1     Ss+  11:07   0:00 /sbin/getty -8 38400 tty1
+root      1311  0.0  0.1  15824  3484 ?        Sl   11:07   0:00 /usr/lib/accountsservice/accounts-daemon
+root      1334  0.0  0.0   2924  1296 ?        S    11:07   0:00 /sbin/dhclient -d -4 -sf /usr/lib/NetworkManager/nm-dhcp-client.action -pf /var/run/sendsigs.omit.d/network-manager.dhclient-eth0.pid -lf /var/lib/dhcp/dhclient-1a027a8b-122e-4644-81d9-8d1f198ef811-eth0.lease -cf /var/run/nm-dhclient-eth0.conf eth0
+nobody    1359  0.0  0.0   6804  1400 ?        S    11:07   0:00 /usr/sbin/dnsmasq --no-resolv --keep-in-foreground --no-hosts --bind-interfaces --pid-file=/var/run/sendsigs.omit.d/network-manager.dnsmasq.pid --listen-address=127.0.0.1 --conf-file=/var/run/nm-dns-dnsmasq.conf --cache-size=0 --proxy-dnssec --enable-dbus --conf-dir=/etc/NetworkManager/dnsmasq.d
+root      1483  0.0  0.1  28428  3784 ?        Sl   11:07   0:00 /usr/lib/upower/upowerd
+colord    1596  0.0  0.5  53344 10320 ?        Sl   11:07   0:00 /usr/lib/i386-linux-gnu/colord/colord
+root      1610  0.0  0.1  16464  3288 ?        Sl   11:07   0:00 lightdm --session-child 12 19
+rtkit     1648  0.0  0.0  21336  1244 ?        SNl  11:07   0:00 /usr/lib/rtkit/rtkit-daemon
+zhangrui  1713  0.0  0.4  61100  9452 ?        Sl   11:08   0:00 /usr/bin/gnome-keyring-daemon --daemonize --login
+zhangrui  1724  0.0  0.4  52400  9372 ?        Ssl  11:08   0:00 gnome-session --session=gnome
+zhangrui  1753  0.0  0.0      0     0 ?        Z    11:08   0:00 [lightdm-session] <defunct>
+zhangrui  1761  0.0  0.0   4080   208 ?        Ss   11:08   0:00 /usr/bin/ssh-agent /usr/bin/dbus-launch --exit-with-session gnome-session --session=gnome
+zhangrui  1764  0.0  0.0   3936   508 ?        S    11:08   0:00 /usr/bin/dbus-launch --exit-with-session gnome-session --session=gnome
+zhangrui  1765  0.0  0.0   3872  1368 ?        Ss   11:08   0:00 //bin/dbus-daemon --fork --print-pid 5 --print-address 7 --session
+zhangrui  1779  0.0  0.9 138932 20184 ?        Sl   11:08   0:01 /usr/lib/gnome-settings-daemon/gnome-settings-daemon
+zhangrui  1787  0.0  0.1   9988  2352 ?        S    11:08   0:00 /usr/lib/gvfs/gvfsd
+zhangrui  1789  0.0  0.2  33736  4616 ?        Sl   11:08   0:00 /usr/lib/gvfs//gvfs-fuse-daemon -f /home/zhangrui/.gvfs
+zhangrui  1797  0.0  0.2  51260  4196 ?        Sl   11:08   0:00 /usr/lib/gnome-settings-daemon/gsd-printer
+zhangrui  1801  0.1  2.9 516996 60812 ?        Sl   11:08   0:34 /usr/bin/gnome-shell
+zhangrui  1810  0.0  0.2 101196  5320 ?        S<l  11:08   0:00 /usr/bin/pulseaudio --start --log-target=syslog
+zhangrui  1813  0.0  0.1  14108  2488 ?        S    11:08   0:00 /usr/lib/pulseaudio/pulse/gconf-helper
+zhangrui  1815  0.0  0.1  11080  3048 ?        S    11:08   0:00 /usr/lib/i386-linux-gnu/gconf/gconfd-2
+zhangrui  1822  0.0  0.8 246596 18000 ?        Sl   11:08   0:00 nm-applet
+zhangrui  1825  0.0  1.2 232128 25356 ?        Sl   11:08   0:01 nautilus -n
+zhangrui  1834  0.0  0.1  11660  3588 ?        S    11:08   0:00 /usr/lib/gvfs/gvfs-gdu-volume-monitor
+root      1836  0.0  0.2  25284  5632 ?        Sl   11:08   0:00 /usr/lib/udisks/udisks-daemon
+root      1837  0.0  0.0   6556   728 ?        S    11:08   0:00 udisks-daemon: not polling any devices
+zhangrui  1840  0.0  0.1  21924  2140 ?        Sl   11:08   0:00 /usr/lib/gvfs/gvfs-afc-volume-monitor
+zhangrui  1843  0.0  0.1  10636  2144 ?        S    11:08   0:00 /usr/lib/gvfs/gvfs-gphoto2-volume-monitor
+zhangrui  1845  0.0  0.1  10468  2948 ?        S    11:08   0:00 /usr/lib/gvfs/gvfsd-trash --spawner :1.7 /org/gtk/gvfs/exec_spaw/0
+zhangrui  1847  0.0  0.1   9992  2456 ?        S    11:08   0:00 /usr/lib/gvfs/gvfsd-burn --spawner :1.7 /org/gtk/gvfs/exec_spaw/1
+zhangrui  1852  0.0  0.4  57880  9324 ?        Sl   11:08   0:00 /usr/lib/gnome-shell/gnome-shell-calendar-server
+zhangrui  1856  0.0  0.2  41612  5572 ?        Sl   11:08   0:00 /usr/lib/telepathy/mission-control-5
+zhangrui  1861  0.0  0.4  91232  9252 ?        Sl   11:08   0:00 /usr/lib/gnome-online-accounts/goa-daemon
+zhangrui  1890  0.0  0.3  38008  7484 ?        Sl   11:08   0:04 /usr/bin/ibus-daemon --xim
+zhangrui  1894  0.0  0.1  19772  3336 ?        Sl   11:08   0:00 /usr/lib/i386-linux-gnu/ibus/ibus-gconf
+zhangrui  1896  0.0  1.1 170272 23772 ?        Sl   11:08   0:02 /usr/bin/python /usr/share/ibus/ui/gtk/main.py
+zhangrui  1898  0.0  0.4  40600  8780 ?        Sl   11:08   0:01 /usr/lib/i386-linux-gnu/ibus/ibus-x11 --kill-daemon
+zhangrui  1903  0.0  0.4  55748  9136 ?        Sl   11:08   0:00 /usr/lib//ibus-sunpinyin/ibus-engine-sunpinyin --ibus
+zhangrui  1923  0.0  0.4  41908  8592 ?        Sl   11:08   0:00 gnome-screensaver
+zhangrui  1924  0.0  0.3  53508  7364 ?        Sl   11:08   0:00 zeitgeist-datahub
+zhangrui  1932  0.0  0.5  43844 10488 ?        Sl   11:08   0:00 /usr/bin/zeitgeist-daemon
+zhangrui  1938  0.0  0.4  51916 10164 ?        Sl   11:08   0:00 /usr/lib/zeitgeist/zeitgeist-fts
+zhangrui  1946  0.0  0.0   5648   280 ?        S    11:08   0:00 /bin/cat
+zhangrui  1952  0.0  0.8 156708 18284 ?        Sl   11:09   0:00 update-notifier
+zhangrui  1964  0.0  0.1  35728  3528 ?        Sl   11:10   0:00 /usr/lib/deja-dup/deja-dup/deja-dup-monitor
+zhangrui  2006  3.6  6.3 522076 130708 ?       Sl   16:04   0:56 qtcreator
+zhangrui  2014  0.0  0.0      0     0 ?        Z    16:04   0:00 [qtcreator] <defunct>
+zhangrui  2016  0.0  0.0      0     0 ?        Z    16:04   0:00 [qtcreator] <defunct>
+root      2056  0.0  0.0      0     0 ?        S    16:04   0:00 [kworker/u8:1]
+zhangrui  2195  0.0  0.3  32080  6632 ?        S    16:06   0:00 tint2
+root      2206  0.0  0.0      0     0 ?        S    16:10   0:00 [kworker/1:1]
+root      2211  0.0  0.0   3276  1240 ?        S    16:10   0:00 /sbin/udevd --daemon
+root      2212  0.0  0.0   3276   852 ?        S    16:10   0:00 /sbin/udevd --daemon
+zhangrui  2467  0.9  1.4 214776 30252 ?        Rl   16:26   0:02 /usr/bin/python /usr/bin/terminator
+zhangrui  2479  0.0  0.0      0     0 ?        Z    16:26   0:00 [/usr/bin/termin] <defunct>
+zhangrui  2480  0.2  0.1   9148  4080 pts/2    Ss   16:26   0:00 /bin/bash
+zhangrui  2603  0.0  0.0   6364  1156 pts/2    R+   16:29   0:00 ps aux

@@ -18,6 +18,6 @@
 #ifndef TESTSHELL_H
 #define TESTSHELL_H
 
-
+// QString readShell(QString cmd);
 
 #endif  // TESTSHELL_H
