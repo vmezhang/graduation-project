@@ -4,17 +4,17 @@
  1753 ?        00:00:00 lightdm-session <defunct>
  1761 ?        00:00:00 ssh-agent
  1764 ?        00:00:00 dbus-launch
- 1765 ?        00:00:00 dbus-daemon
- 1779 ?        00:00:03 gnome-settings-
+ 1765 ?        00:00:01 dbus-daemon
+ 1779 ?        00:00:05 gnome-settings-
  1787 ?        00:00:00 gvfsd
  1789 ?        00:00:00 gvfs-fuse-daemo
  1797 ?        00:00:00 gsd-printer
- 1801 ?        00:01:52 gnome-shell
+ 1801 ?        00:02:53 gnome-shell
  1810 ?        00:00:00 pulseaudio
  1813 ?        00:00:00 gconf-helper
  1815 ?        00:00:00 gconfd-2
  1822 ?        00:00:00 nm-applet
- 1825 ?        00:00:01 nautilus
+ 1825 ?        00:00:09 nautilus
  1834 ?        00:00:00 gvfs-gdu-volume
  1840 ?        00:00:00 gvfs-afc-volume
  1843 ?        00:00:00 gvfs-gphoto2-vo
@@ -23,27 +23,28 @@
  1852 ?        00:00:00 gnome-shell-cal
  1856 ?        00:00:00 mission-control
  1861 ?        00:00:00 goa-daemon
- 1890 ?        00:00:19 ibus-daemon
+ 1890 ?        00:00:27 ibus-daemon
  1894 ?        00:00:00 ibus-gconf
- 1896 ?        00:00:14 python
- 1898 ?        00:00:03 ibus-x11
+ 1896 ?        00:00:18 python
+ 1898 ?        00:00:05 ibus-x11
  1903 ?        00:00:03 ibus-engine-sun
  1923 ?        00:00:00 gnome-screensav
  1924 ?        00:00:00 zeitgeist-datah
  1932 ?        00:00:00 zeitgeist-daemo
  1938 ?        00:00:00 zeitgeist-fts
  1946 ?        00:00:00 cat
- 1952 ?        00:00:00 update-notifier
+ 1952 ?        00:00:01 update-notifier
  1964 ?        00:00:00 deja-dup-monito
- 2006 ?        00:02:41 qtcreator
- 2014 ?        00:00:00 qtcreator <defunct>
- 2016 ?        00:00:00 qtcreator <defunct>
- 2195 ?        00:00:00 tint2
- 2714 ?        00:09:42 firefox
+ 2195 ?        00:00:01 tint2
  2740 ?        00:00:00 at-spi-bus-laun
- 2962 ?        00:00:03 /usr/bin/termin
- 2974 ?        00:00:00 /usr/bin/termin <defunct>
- 3491 ?        00:00:00 Frame
- 3528 ?        00:00:00 Frame
- 3535 ?        00:00:00 sh
- 3536 ?        00:00:00 ps
+ 3920 ?        00:00:02 /usr/bin/termin
+ 3932 ?        00:00:00 /usr/bin/termin <defunct>
+ 3990 ?        00:01:15 qtcreator
+ 3998 ?        00:00:00 qtcreator <defunct>
+ 4000 ?        00:00:00 qtcreator <defunct>
+ 4160 ?        00:00:00 dconf-service
+ 4186 ?        00:00:00 gvfsd-metadata
+ 4277 ?        00:00:18 firefox
+ 4686 ?        00:00:01 Frame
+ 4697 ?        00:00:00 sh
+ 4698 ?        00:00:00 ps
