@@ -18,6 +18,20 @@
 #ifndef TESTSHELL_H
 #define TESTSHELL_H
 
-// QString readShell(QString cmd);
+QString readShell(QString cmd);
+void printp(QString pMessage);
+
+QString readShell(QString cmd)
+{
+    Qstring qcmd;
+    // 解析cmd
+    return qcmd;
+}
+
+// 屏幕打印函数
+void printp(char *pMessage)
+{
+    appendPlainText(pMessage);
+}
 
 #endif  // TESTSHELL_H
