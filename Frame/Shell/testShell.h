@@ -22,16 +22,19 @@
 #include <QFile>
 
 QString readShell(QString cmd);
+// cmd解析函数
+// QString getCmdResult(QString cmd);
 
 QString readShell(QString cmd)
 {
     QString outMessage;
     QString fileName;
-    // 以下为测试时设置的文件名
+    // 解析cmd
+    // outMessage = getCmdResult(cmd);
     // 命令的返回结果可以是一个文件名,将读取文件的内容传给outMessage
     // 或者直接将运行结果返回成字符串,将字符串传给outMessage
+    // 以下为测试时设置的文件名
     fileName = "cmd.txt";
-    // 解析cmd
     // 如果编译程序过程中或者运行程序有输出将会返回
     // 一个保存运行结果的信息的文件路径
     // 通过读取文件中的内容获得返回结果
