@@ -20,25 +20,38 @@
 
 #include "shell.h"
 #include <QFile>
+#include <QDebug>
 
 QString readShell(QString cmd);
-// cmd解析函数
-// QString getCmdResult(QString cmd);
 
 QString readShell(QString cmd)
 {
+    // 输出的结果
     QString outMessage;
+    // 读取结果的文件名
     QString fileName;
+    // 传递程序原文件
+    QString pcfile;
+    // 运行命令
+    QString pcrun;
+
     // 解析cmd
     // outMessage = getCmdResult(cmd);
-    // 命令的返回结果可以是一个文件名,将读取文件的内容传给outMessage
-    // 或者直接将运行结果返回成字符串,将字符串传给outMessage
-    // 以下为测试时设置的文件名
-    fileName = "cmd.txt";
-    // 如果编译程序过程中或者运行程序有输出将会返回
-    // 一个保存运行结果的信息的文件路径
-    // 通过读取文件中的内容获得返回结果
+    if (cmd.left(3) != "pl ") {
+        return "error!";
+    }
+    // 保存源文件名之后传给编译运行程序的脚本之中
+    pcfile = cmd.mid(3);
+    pcrun = "sh ../lp_sh/run.sh ";
+    pcrun = pcrun + pcfile;
+    qDebug(pcrun.toLatin1().data());
+    // system(pcrun);
 
+    // 程序执行的结果以及编译信息均保存在/tmp/result.txt中
+    // 每次都去完毕我会将其结果清空保证文件
+    // 这样做为了保证每次运行过程中的反馈信息以追加模式写入
+
+    fileName = "/tmp/result.txt";
     QFile outputFile(fileName);
     outputFile.open(QFile::ReadWrite);
     outMessage = outputFile.readAll();
@@ -47,6 +60,5 @@ QString readShell(QString cmd)
 
     return outMessage;
 }
-
 
 #endif  // TESTSHELL_H
